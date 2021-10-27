@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+class timing{
+    public:
+    int h,m,s;
+    void getDetails(){
+        cout<<"Enter time: \n";
+        cout<<" Hours? ";cin>>h;
+        cout<<" Minutes? ";cin>>m;
+        cout<<" Seconds? ";cin>>s;
+    }
+    void printDetails(){
+        cout<<"\nThe time is = "<<h<<":"<<m<<":"<<s;
+    }
+    void sec(){
+        int x=s+(m*60)+(h*60*60);
+        cout<<"\nTime in total seconds = "<<x;
+    }
+};
+int main(){
+    timing t1;
+    t1.getDetails();
+    t1.printDetails();
+    t1.sec();
+    return 0;
+}
